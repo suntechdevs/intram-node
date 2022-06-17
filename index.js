@@ -10,13 +10,10 @@ function Setup(data) {
     this.config = {}
     this.config['X-MARCHAND-KEY'] = data && data.marchandKey || process.env.INTRAM_MARCHAND_KEY;
     this.config['X-PRIVATE-KEY'] = data && data.privateKey || process.env.INTRAM_PRIVATE_KEY;
-     this.config['X-API-KEY'] = data && data.publicKey || process.env.INTRAM_PUBLIC_KEY;
+    this.config['X-API-KEY'] = data && data.publicKey || process.env.INTRAM_PUBLIC_KEY;
     this.config['X-SECRET-KEY'] = data && data.secret || process.env.INTRAM_SECRET;
     this.config['Content-Type'] = 'application/json';
-    if (data && data.mode && data.mode.toLowerCase() === 'test')
-        this.baseURL = 'http://localhost:4200/api/v1/';
-    else
-        this.baseURL = 'https://webservices.intram.org:4002/api/v1/';
+    this.baseURL = 'https://webservices.intram.org:4002/api/v1/';
 }
 
 /**
