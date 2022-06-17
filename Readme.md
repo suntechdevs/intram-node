@@ -3,7 +3,7 @@
 
 [![npm version](https://badge.fury.io/js/intram-node.svg)](https://npmjs.org/package/intram-node)  [![downloads](https://img.shields.io/npm/dw/intram-node.svg)](https://npmjs.org/package/intram-node)  [![open issues](https://img.shields.io/github/issues-raw/suntechedvs/intram-node.svg)](https://github.com/suntechedvs/intram-node/issues)  [![license](https://img.shields.io/github/license/suntechedvs/intram-node.svg)](https://github.com/suntechedvs/intram-node/LICENSE)    [![coverage status](https://coveralls.io/repos/suntechedvs/intram-node/badge.svg)](https://coveralls.io/github/suntechedvs/intram-node) [![Gitter](https://badges.gitter.im/suntechedvs/intram-node.svg)](https://gitter.im/suntechedvs/intram-node)
 
-The [Node.JS](http://nodejs.org) library for [INTRAM (intram.com)](https://intram.com).
+The [Node.JS](http://nodejs.org) library for [INTRAM (intram.org)](https://intram.org).
 
 Built on the INTRAM HTTP API (beta).
 
@@ -20,10 +20,10 @@ Setup intram API keys.
 ```js
 var setup = new intram.Setup({
   mode: 'test', // optional. use in sandbox mode.
-  marchandKey: 'tpk_5e9469e65341de91988b352eba11f9f0c5f671384e1d6bfb09ce30103bcc09903b42dfacfb2b436d4b48af01f763bbaa1748b1d6ea165d4a2f581bcfd1fd8943',
-  privateKey: 'tpk_5e9469e65341de91988b352eba11f9f0c5f671384e1d6bfb09ce30103bcc09903b42dfacfb2b436d4b48af01f763bbaa1748b1d6ea165d4a2f581bcfd1fd8943',
-  publicKey: "5e59e0c34bb8737cedf4c0ec92d9ae94007e33e5c30280596456990d9fc2f6058147a092fa6017ab5a25150fc0dd2991cff0e49b9ee8cb04355b689769d68d44",
-  secret: 'tsk_243a7b89fd82a2b4e049c0c8ff39c3012ee6ec70bda3288ad2bf6a1270439ce4245e2f1ea7e4c03beb5cd807cbc7a32c0baf7de3a1f9d9b8593bab38af6531f7'          
+  marchandKey: 'tpk_5e9469e65341de91988b352eba11f',
+  privateKey: 'tpk_5e9469e65341de91988b352eba11f9f',
+  publicKey: "5e59e0c34bb8737cedf4c0ec92d9ae940",
+  secret: 'tsk_243a7b89fd82a2b4e049c0c8ff39c'          
 });
 ```
 
@@ -150,7 +150,7 @@ invoice.confirm(token)
     invoice.status; //  SUCCESS, PENDING, CANCELED or FAIL
     // available if status == 'SUCCESS'
     invoice.customer; // {name: 'Bahsoumany Oualid', phone: '22967723243', email: 'obahsoumane@gmail.com'}
-    invoice.receiptURL; // 'https://app.intram.com/sandbox-checkout/receipt/pdf/test_44a6fef19a.pdf'
+    invoice.receiptURL; // 'https://gateway.intram.org/sandbox-checkout/receipt/pdf/test_44a6fef19a.pdf'
   })
   .catch(function (e) {
     console.log(e);
