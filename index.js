@@ -1,8 +1,6 @@
 exports.Setup = exports.setup = Setup;
 exports.Store = exports.store = Store;
 exports.CheckoutInvoice = exports.checkoutInvoice = require('./vendor/lib/checkoutInvoice');
-// exports.OnsiteInvoice = exports.onsiteInvoice = require('./vendor/lib/onsite-invoice');
-// exports.DirectPay = exports.directPay = require('./vendor/lib/direct-pay');
 
 /**
  * Setup INTRAM
@@ -18,7 +16,7 @@ function Setup(data) {
     if (data && data.mode && data.mode.toLowerCase() === 'test')
         this.baseURL = 'http://localhost:4200/api/v1/';
     else
-        this.baseURL = 'http://localhost:4200/api/v1/';
+        this.baseURL = 'https://webservices.intram.org:4002/api/v1/';
 }
 
 /**
